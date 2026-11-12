@@ -144,8 +144,22 @@ curl -X POST -H "Content-Type: application/json" -d '{"sampleKey":"sampleValue"}
 curl <URL>/data
 ```
 
-Windows notes: in PowerShell use `curl.exe` (plain `curl` is an alias for `Invoke-WebRequest`) and
-escape the JSON quotes, or use `Invoke-RestMethod`. In Git Bash, paths such as `/etc/resolv.conf`
+Windows notes: the `curl` POST above uses bash quoting and will **not** work as-is in `cmd.exe` or
+PowerShell. Sending it unchanged returns `{"error":"Request body must be valid JSON"}`, because
+those shells mangle the JSON quotes before curl sees them (the app is behaving correctly).
+
+```bat
+:: cmd.exe: double-quote the body and escape the inner quotes
+curl -X POST -H "Content-Type: application/json" -d "{\"sampleKey\":\"sampleValue\"}" <URL>/data
+```
+
+```powershell
+# PowerShell: use curl.exe (plain `curl` is an alias for Invoke-WebRequest), or Invoke-RestMethod
+curl.exe -X POST -H "Content-Type: application/json" -d '{\"sampleKey\":\"sampleValue\"}' <URL>/data
+Invoke-RestMethod -Method Post -Uri <URL>/data -ContentType application/json -Body '{"sampleKey":"sampleValue"}'
+```
+
+In Git Bash, paths such as `/etc/resolv.conf`
 get rewritten to Windows paths: run `export MSYS_NO_PATHCONV=1` first when passing absolute
 Linux paths to `kubectl exec`.
 
@@ -413,10 +427,14 @@ only sections 2 to 4. Any step that fails or is missing is a README bug. Record 
    `C:/Program Files/Git/etc/resolv.conf: No such file`. Fixed with `export MSYS_NO_PATHCONV=1`.
 8. **Pod clock is UTC**, so the welcome message is 5.5 hours behind IST. Not changed; it is
    the correct behaviour for containers by default.
-9. **Reading the wrong pod during a rollout.** While checking resources after changing the memory
+9. **`POST /data` returned "Request body must be valid JSON" from `cmd.exe`.** The bash-style
+   `-d '{"sampleKey":"sampleValue"}'` is not valid in `cmd.exe`: single quotes are literal and the
+   inner double quotes are stripped, so Flask received malformed JSON. Fixed by using the
+   `cmd.exe` quoting shown in section 4. The 400 response was the app's input validation working.
+10. **Reading the wrong pod during a rollout.** While checking resources after changing the memory
    units, `jsonpath` on `items[0]` returned a terminating pod with the old values. Always check
    `kubectl get pods` shows only new pods before inspecting.
-10. **Gotcha, not hit but worth knowing:** the MongoDB init credentials only apply to an empty data
+11. **Gotcha, not hit but worth knowing:** the MongoDB init credentials only apply to an empty data
     directory, and the PV uses `Retain`. If you change the Secret after the first deployment and
     redeploy, MongoDB keeps the old password and Flask gets "Authentication failed". Fix by wiping
     the data (`minikube delete`) or changing the password inside MongoDB.
