@@ -355,6 +355,18 @@ and Flask reconnected without being restarted, because it addresses MongoDB by t
 
 ### 4. Autoscaling under load
 
+**Result:** under load, average CPU rose to 226% of the request (target 70%) and the HPA scaled the
+Flask Deployment from **2 to 5 replicas in under 35 seconds** (4 pods at the 16:19:30 snapshot, 5 at
+16:19:46; the previous snapshot, 16:19:14, was still at 2 pods), then held at the `maxReplicas` cap
+of 5. After the load was removed, CPU fell to 1% and the HPA scaled back
+**from 5 to 2** after the default 5-minute stabilization window.
+
+![HPA autoscaling test: CPU and replica count over time](test-results/hpa-autoscaling.png)
+
+*Chart generated from the `kubectl` snapshots in `test-results/hpa-timeline.txt` (taken every
+15 seconds) with `test-results/plot_hpa.py`. It is a plot of the captured data, not a screenshot.
+The "load removed" line is approximate; the CPU metric lags the real change by roughly a minute.*
+
 Setup: HPA at 70% CPU, min 2, max 5 (140m average per pod at a 200m request).
 Load: `k8s/load-generator.yaml`, 4 busybox pods each running a tight `wget` loop against
 `http://flask-service:5000/`. Run it with:
@@ -375,8 +387,9 @@ Timeline (from `test-results/hpa-timeline.txt`):
 | 16:18:27 | 24% / 70% | 2 | Load builds up. |
 | 16:19:30 | 226% / 70% | 4 | HPA scales 2 -> 4, then 4 -> 5 about 15 s later. |
 | 16:21:21 | 117% / 70% | 5 | Stuck at `maxReplicas`; the HPA never exceeds 5. |
-| ~16:23 | falling to 1% | 5 | Load removed. |
-| ~16:28 | 1% / 70% | 2 | After the 5-minute stabilization window, scales 5 -> 2. |
+| 16:23:27 | 24% / 70% | 5 | CPU starts falling after the load is removed (metric lags). |
+| 16:24:29 | 1% / 70% | 5 | CPU is back to idle; replicas stay at 5 during the stabilization window. |
+| 16:28:36 | 1% / 70% | 2 | HPA scales 5 -> 2 ("All metrics below target"). |
 
 HPA events (`test-results/hpa-rescale-events.txt`):
 
