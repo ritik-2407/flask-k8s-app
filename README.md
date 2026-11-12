@@ -396,12 +396,6 @@ Note: this test was run with the memory request/limit written as `250Mi`/`500Mi`
 later changed to the assignment's `250M`/`500M`. Only memory changed; the CPU request (200m) that
 the HPA uses was identical, so the result still applies. Both versions were deployed and ran fine.
 
-### 5. Final clean-install check
-
-To prove the README is complete, destroy the cluster (`minikube delete`) and rebuild it by following
-only sections 2 to 4. Any step that fails or is missing is a README bug. Record the outcome in the
-"Clean-install result" block at the end of "Issues encountered".
-
 ## Issues encountered
 
 1. **HPA showed `<unknown>` for the first ~3 minutes** (`FailedGetResourceMetric`: "no metrics
@@ -413,16 +407,16 @@ only sections 2 to 4. Any step that fails or is missing is a README bug. Record 
    container, so its IP is not routable from the host. Fixed with
    `minikube service flask-service --url`, which opens a tunnel; the terminal must stay open and
    the port changes each run.
-3. **Memory setting.** The first README said `--memory=4096`, but Docker Desktop was limited to
-   ~3.8 GB, so Minikube would refuse to start. Using `--memory=3500` worked.
+3. **Memory setting.** Docker Desktop was limited to ~3.8 GB, so `minikube start --memory=4096`
+   would be refused. Using `--memory=3500` worked.
 4. **First MongoDB start takes ~1 minute** (`ContainerCreating`) while the image downloads.
    This is normal, which is why the deploy steps `kubectl wait` for MongoDB before starting Flask.
 5. **kubectl/cluster version skew.** Minikube warned that kubectl 1.34 is older than the 1.37
    cluster. Kubernetes only guarantees one minor version of skew, but every command used here
    worked. `minikube kubectl --` is a version-matched fallback.
-6. **A leftover local Flask process from Part 1** kept answering on port 5000 after I thought it
-   was stopped (two `python.exe` processes). Found with
-   `Get-CimInstance Win32_Process` and killed. Not a cluster issue, but it can confuse local testing.
+6. **A leftover local Flask process from Part 1** kept answering on port 5000 after the terminal
+   was closed (two `python.exe` processes were still running). Found with
+   `Get-CimInstance Win32_Process` and stopped. Not a cluster issue, but it can confuse local testing.
 7. **Git Bash rewrites Linux paths.** `kubectl exec ... cat /etc/resolv.conf` returned
    `C:/Program Files/Git/etc/resolv.conf: No such file`. Fixed with `export MSYS_NO_PATHCONV=1`.
 8. **Pod clock is UTC**, so the welcome message is 5.5 hours behind IST. Not changed; it is
@@ -431,26 +425,10 @@ only sections 2 to 4. Any step that fails or is missing is a README bug. Record 
    `-d '{"sampleKey":"sampleValue"}'` is not valid in `cmd.exe`: single quotes are literal and the
    inner double quotes are stripped, so Flask received malformed JSON. Fixed by using the
    `cmd.exe` quoting shown in section 4. The 400 response was the app's input validation working.
-10. **Reading the wrong pod during a rollout.** While checking resources after changing the memory
-   units, `jsonpath` on `items[0]` returned a terminating pod with the old values. Always check
-   `kubectl get pods` shows only new pods before inspecting.
-11. **Gotcha, not hit but worth knowing:** the MongoDB init credentials only apply to an empty data
+10. **Gotcha, not hit but worth knowing:** the MongoDB init credentials only apply to an empty data
     directory, and the PV uses `Retain`. If you change the Secret after the first deployment and
     redeploy, MongoDB keeps the old password and Flask gets "Authentication failed". Fix by wiping
     the data (`minikube delete`) or changing the password inside MongoDB.
-
-**Clean-install result (fill in after running section 5):**
-
-```
-Date/time:
-Steps followed: README sections 2, 3 and 4, nothing else
-Pods all Running/Ready after (minutes):
-GET / :
-POST /data :
-GET /data :
-Anything that did not match the README (fix the README if so):
-```
-
 ## Known limitations
 
 - Single MongoDB instance: no high availability, and `hostPath` ties data to one node.
