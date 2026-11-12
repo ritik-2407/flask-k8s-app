@@ -1,0 +1,5 @@
+NAME        REFERENCE              TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2         5         2          26m
+NAME                         READY   STATUS    RESTARTS   AGE
+flask-app-6c75cc8f58-2cvx2   1/1     Running   0          26m
+flask-app-6c75cc8f58-ddv9s   1/1     Running   0          26m

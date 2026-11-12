@@ -1,0 +1,312 @@
+== 16:17:56
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     13m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:18:11
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     14m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:18:27
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     2     14m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:18:43
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     2     14m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:18:59
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     2     14m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:19:14
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     2     15m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:19:30
+flask-hpa   Deployment/flask-app   cpu: 226%/70%   2     5     2     15m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:19:46
+flask-hpa   Deployment/flask-app   cpu: 226%/70%   2     5     4     15m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:20:02
+flask-hpa   Deployment/flask-app   cpu: 226%/70%   2     5     5     16m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:20:18
+flask-hpa   Deployment/flask-app   cpu: 226%/70%   2     5     5     16m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:20:34
+flask-hpa   Deployment/flask-app   cpu: 149%/70%   2     5     5     16m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:20:50
+flask-hpa   Deployment/flask-app   cpu: 149%/70%   2     5     5     16m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:21:06
+flask-hpa   Deployment/flask-app   cpu: 149%/70%   2     5     5     17m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:21:21
+flask-hpa   Deployment/flask-app   cpu: 117%/70%   2     5     5     17m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:21:37
+flask-hpa   Deployment/flask-app   cpu: 117%/70%   2     5     5     17m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:21:53
+flask-hpa   Deployment/flask-app   cpu: 117%/70%   2     5     5     17m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:22:09
+flask-hpa   Deployment/flask-app   cpu: 117%/70%   2     5     5     18m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:22:25
+flask-hpa   Deployment/flask-app   cpu: 118%/70%   2     5     5     18m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:22:40
+flask-hpa   Deployment/flask-app   cpu: 118%/70%   2     5     5     18m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:22:56
+flask-hpa   Deployment/flask-app   cpu: 118%/70%   2     5     5     18m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:23:11
+flask-hpa   Deployment/flask-app   cpu: 118%/70%   2     5     5     19m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:23:27
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     5     19m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:23:42
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     5     19m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:23:58
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     5     19m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:24:13
+flask-hpa   Deployment/flask-app   cpu: 24%/70%   2     5     5     20m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:24:29
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     20m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:24:44
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     20m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:25:00
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     20m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:25:15
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     21m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:25:31
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     21m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:25:46
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     21m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:26:02
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     22m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:26:17
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     22m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:26:33
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     22m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:26:48
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     22m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:27:04
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     23m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:27:19
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     23m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:27:34
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     23m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:27:50
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     23m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Running
+   flask-app-6c75cc8f58-95d2b 1/1 Running
+   flask-app-6c75cc8f58-cqqmf 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:28:05
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     5     24m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Terminating
+   flask-app-6c75cc8f58-95d2b 1/1 Terminating
+   flask-app-6c75cc8f58-cqqmf 1/1 Terminating
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:28:21
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     24m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-7jsr4 1/1 Terminating
+   flask-app-6c75cc8f58-95d2b 1/1 Terminating
+   flask-app-6c75cc8f58-cqqmf 1/1 Terminating
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:28:36
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     24m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:28:52
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     24m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:29:07
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     25m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:29:23
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     25m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:29:38
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     25m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:29:54
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     25m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:30:09
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     26m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:30:25
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     26m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:30:40
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     26m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:30:56
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     26m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running
+== 16:31:11
+flask-hpa   Deployment/flask-app   cpu: 1%/70%   2     5     2     27m
+   flask-app-6c75cc8f58-2cvx2 1/1 Running
+   flask-app-6c75cc8f58-ddv9s 1/1 Running

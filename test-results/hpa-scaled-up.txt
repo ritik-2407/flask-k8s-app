@@ -1,0 +1,19 @@
+NAME        REFERENCE              TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+flask-hpa   Deployment/flask-app   cpu: 117%/70%   2         5         5          17m
+NAME                         READY   STATUS    RESTARTS   AGE
+flask-app-6c75cc8f58-2cvx2   1/1     Running   0          17m
+flask-app-6c75cc8f58-7jsr4   1/1     Running   0          2m18s
+flask-app-6c75cc8f58-95d2b   1/1     Running   0          2m33s
+flask-app-6c75cc8f58-cqqmf   1/1     Running   0          2m33s
+flask-app-6c75cc8f58-ddv9s   1/1     Running   0          17m
+NAME                              CPU(cores)   MEMORY(bytes)   
+flask-app-6c75cc8f58-2cvx2        232m         25Mi            
+flask-app-6c75cc8f58-7jsr4        232m         24Mi            
+flask-app-6c75cc8f58-95d2b        235m         24Mi            
+flask-app-6c75cc8f58-cqqmf        234m         24Mi            
+flask-app-6c75cc8f58-ddv9s        237m         25Mi            
+load-generator-5f5f7ff767-dzh4l   372m         3Mi             
+load-generator-5f5f7ff767-hhsq5   369m         3Mi             
+load-generator-5f5f7ff767-k8d6t   369m         3Mi             
+load-generator-5f5f7ff767-stqp9   371m         3Mi             
+mongodb-0                         10m          167Mi           
